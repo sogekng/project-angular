@@ -1,0 +1,30 @@
+<body>
+  <div class="card" style="width: 60rem;padding:2rem;margin: 2rem auto;">
+    <div class="card-body">
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+        </svg>
+      </a>
+      <h4 class="card-title" style="text-align: center; margin: 2rem;">Adicionar Usuário</h4>
+      <form (submit)="save()" #userForm="ngForm" class="form-inline">
+        <div class="input-group mb-3">
+          <label for="name" class="input-group-text">NOME</label>
+          <input class="form-control" type="text" id="name" name="name" [(ngModel)]="user.username" required>
+        </div>
+        <div class="input-group mb-3">
+          <label for="cpf" class="input-group-text">CPF</label>
+          <input class="form-control" type="text" id="cpf" name="cpf" [(ngModel)]="user.cpf" mask="000.000.000-00" required>
+        </div>
+        <div class="input-group mb-3">
+          <label for="rg" class="input-group-text">RG</label>
+          <input class="form-control" type="text" id="rg" name="rg" [(ngModel)]="user.rg" mask="00.000.000-0" required>
+        </div>
+        <div class="form-group row">
+          <button type="submit" class="btn btn-primary" style="margin: 2rem auto">Adicionar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
